@@ -5,6 +5,7 @@ Date: 2025-06-05
 '''
 import casadi as cas
 import matplotlib.pyplot as plt
+import scipy.io
 from Constants import *
 from numpy import sin, cos, tan, pi
 from Dynamics import trajectory_generator
@@ -245,6 +246,12 @@ print(X_opt[0, :])
 print(X_opt[-1, :])
 print(T_opt)
 
+# Save Nominal Trajectory Data
+data = {'Xnom': X_opt, 'Unom': U_opt, 'Tnom': T_opt}
+scipy.io.savemat('Nominal.mat', data)
+
+
+# Plot Trajectory Data
 fig = plt.figure(figsize=(8, 6))
 ax  = fig.add_subplot(111, projection='3d')
 
