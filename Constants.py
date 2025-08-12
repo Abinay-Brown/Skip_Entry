@@ -1,9 +1,10 @@
 import numpy as np
 from numpy import sin, cos, tan, pi
 
-N = 50             # Number of trajectory points
+N = 51             # Number of trajectory points
 nx = 6              # State Dimension
 nu = 2              # Control Dimension
+NUM = 50
 
 params = {}
 # Blunt Nose Cone Geometry (Stardust)
